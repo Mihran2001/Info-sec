@@ -1,38 +1,24 @@
-// import React from "react";
-// import { ItemWrapper, IconContactBox, IconBox, ContactBox } from "./styles";
-// import { SvgIconProps } from "@material-ui/core";
-
-// interface IContactItem {
-//   icon: (props: SvgIconProps) => JSX.Element;
-//   contact: string | number;
-// }
-
-// const ContactItem: React.FC<IContactItem> = ({ icon, contact }) => {
-//   return (
-//     <ItemWrapper>
-//       <IconContactBox>
-//         <IconBox> {icon} </IconBox>
-//         <ContactBox> {contact} </ContactBox>
-//       </IconContactBox>
-//     </ItemWrapper>
-//   );
-// };
-
-// export default ContactItem;
-
 import React from "react";
-import { ItemWrapper, IconContactBox, IconBox, ContactBox } from "./styles";
-import { SvgIconProps } from "@material-ui/core";
+import { JoinUsBoxWrapper, TitleWrapper, JoinUsBox } from "./styles";
+import StyledTitle from "../../components/Title";
+import ContactItem from "../../components/ContactFormItem/index";
+import { contactsData } from "./icons";
 
-const ContactItem: React.FC = () => {
+const Contacts: React.FC = () => {
   return (
-    <ItemWrapper>
-      <IconContactBox>
-        <IconBox> </IconBox>
-        <ContactBox> </ContactBox>
-      </IconContactBox>
-    </ItemWrapper>
+    <JoinUsBoxWrapper>
+      <JoinUsBox>
+        <TitleWrapper>
+          <StyledTitle level={1} style={{ fontSize: "36px" }}>
+            You can join us!
+          </StyledTitle>
+        </TitleWrapper>
+        {contactsData.map((item, index) => (
+          <ContactItem icon={item.icon} contact={item.content} key={index} />
+        ))}
+      </JoinUsBox>
+    </JoinUsBoxWrapper>
   );
 };
 
-export default ContactItem;
+export default Contacts;

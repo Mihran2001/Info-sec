@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import InfoSec from "./pages/InfoSec";
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 
 function App() {
   return <InfoSec />;

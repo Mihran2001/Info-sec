@@ -30,24 +30,3 @@ export const ContentBox = styled.div`
   padding: 10px;
   padding-top: 50px;
 `;
-
-export const JoinUsBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
-  flex: 0 0 50%;
-  /* background-color: white; */
-`;
-
-export const TitleWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ContactsForm = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;

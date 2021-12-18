@@ -3,37 +3,15 @@ import {
   HeroSection,
   Wrapper,
   InfoSecBox,
-  JoinUsBox,
   LogoWrapper,
   ContentBox,
-  TitleWrapper,
-  ContactsForm,
 } from "./styles";
 import { ReactComponent as Logo } from "../../assets/svg/Logo.svg";
 import StyledTitle from "../../components/Title";
 import Paragraph from "../../components/Paragraph";
-import { Form, Input, InputNumber, Button } from "antd";
-
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
-
-const validateMessages = {
-  required: "${label} is required!",
-  types: {
-    email: "${label} is not a valid email!",
-    number: "${label} is not a valid number!",
-  },
-  number: {
-    range: "${label} must be between ${min} and ${max}",
-  },
-};
+import Contacts from "../../components/Contacts/index";
 
 const InfoSec: React.FC = () => {
-  const onFinish = (values: any) => {
-    console.log(values);
-  };
   return (
     <HeroSection>
       <Wrapper>
@@ -62,14 +40,7 @@ const InfoSec: React.FC = () => {
             </p>
           </ContentBox>
         </InfoSecBox>
-        <JoinUsBox>
-          <TitleWrapper>
-            <StyledTitle level={1} style={{ fontSize: "36px" }}>
-              You can join us!
-            </StyledTitle>
-          </TitleWrapper>
-          <ContactsForm></ContactsForm>
-        </JoinUsBox>
+        <Contacts></Contacts>
       </Wrapper>
     </HeroSection>
   );
