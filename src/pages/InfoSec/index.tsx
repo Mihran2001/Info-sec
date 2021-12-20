@@ -24,6 +24,9 @@ const InfoSec: React.FC = () => {
               <Logo style={{ height: "100%", width: "100%" }} />
             </div>
           </LogoWrapper>
+          <div
+            style={{ height: "1px", width: "60%", background: "#d42530" }}
+          ></div>
           <ContentBox>
             <StyledTitle level={1} style={{ fontSize: "46px" }}>
               WEBSITE IS <AnimatedPart> COMING SOON </AnimatedPart>

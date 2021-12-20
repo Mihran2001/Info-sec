@@ -69,9 +69,7 @@ export const InfoSecBox = styled.div`
   padding-top: 50px;
 `;
 
-export const LogoWrapper = styled.div`
-  border-bottom: 1px solid #d42530;
-`;
+export const LogoWrapper = styled.div``;
 
 export const ContentBox = styled.div`
   padding: 10px;
