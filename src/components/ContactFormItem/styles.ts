@@ -15,7 +15,7 @@ export const IconContactBox = styled.ul`
   width: 100%;
   display: inline;
   padding-left: 10px;
-  padding-top: 50px;
+  padding-top: 30px;
   margin-bottom: 20px;
 `;
 

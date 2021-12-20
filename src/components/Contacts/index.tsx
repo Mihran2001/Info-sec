@@ -14,7 +14,13 @@ const Contacts: React.FC = () => {
           </StyledTitle>
         </TitleWrapper>
         {contactsData.map((item, index) => (
-          <ContactItem icon={item.icon} contact={item.content} key={index} />
+          <ContactItem
+            icon={item.icon}
+            contact={item.content}
+            hrefType={item.hrefType}
+            hrefTO={item.hrefTO}
+            key={index}
+          />
         ))}
       </JoinUsBox>
     </JoinUsBoxWrapper>

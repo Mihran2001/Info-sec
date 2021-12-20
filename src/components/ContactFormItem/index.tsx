@@ -8,17 +8,25 @@ import {
 import { SvgIconProps } from "@material-ui/core";
 
 interface IContactItem {
-  //   icon?: (props: SvgIconProps) => JSX.Element;
+  // icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   icon?: any;
-
   contact?: string | number;
+  hrefType?: string;
+  hrefTO?: string;
 }
 
-const ContactItem: React.FC<IContactItem> = ({ icon, contact }) => {
+const ContactItem: React.FC<IContactItem> = ({
+  icon: IconComponent,
+  contact,
+  hrefType,
+  hrefTO,
+}) => {
   return (
     <ContactsBoxWrapper>
       <IconContactBox>
-        {/* <IconBox>{icon}</IconBox> */}
+        <IconBox>
+          {<IconComponent style={{ verticalAlign: "middle" }} />}
+        </IconBox>
         <ContactBox>
           <p
             style={{
@@ -28,7 +36,12 @@ const ContactItem: React.FC<IContactItem> = ({ icon, contact }) => {
               paddingLeft: "20px",
             }}
           >
-            {contact}
+            <a
+              style={{ color: "white", textDecoration: "none" }}
+              href={hrefTO ? `${hrefTO}` : `${hrefType}${contact}`}
+            >
+              {contact}
+            </a>
           </p>{" "}
         </ContactBox>
       </IconContactBox>

@@ -5,6 +5,7 @@ import {
   InfoSecBox,
   LogoWrapper,
   ContentBox,
+  AnimatedPart,
 } from "./styles";
 import { ReactComponent as Logo } from "../../assets/svg/Logo.svg";
 import StyledTitle from "../../components/Title";
@@ -17,17 +18,22 @@ const InfoSec: React.FC = () => {
       <Wrapper>
         <InfoSecBox>
           <LogoWrapper>
-            <Logo />
+            <div
+              style={{ width: "300px", height: "80px", marginBottom: "30px" }}
+            >
+              <Logo style={{ height: "100%", width: "100%" }} />
+            </div>
           </LogoWrapper>
           <ContentBox>
             <StyledTitle level={1} style={{ fontSize: "46px" }}>
-              WEBSITE IS COMING SOON
+              WEBSITE IS <AnimatedPart> COMING SOON </AnimatedPart>
             </StyledTitle>
             <p
               style={{
                 fontSize: "14px",
                 color: "#7D7E81",
                 paddingRight: "100px",
+                lineHeight: "1.7",
               }}
             >
               {" "}
@@ -40,7 +46,7 @@ const InfoSec: React.FC = () => {
             </p>
           </ContentBox>
         </InfoSecBox>
-        <Contacts></Contacts>
+        <Contacts />
       </Wrapper>
     </HeroSection>
   );
