@@ -2,53 +2,57 @@ import styled from "styled-components";
 
 export const HeroSection = styled.section`
   position: relative;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #050a0f;
-  padding: 190px;
+  /* padding: 190px; */
 
   &::before {
-    content: " ";
+    content: "";
     position: absolute;
-    width: 253px;
-    height: 253px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
     background-color: #ff0000;
-    opacity: 0.8;
-    filter: blur(250px);
+    filter: blur(100px);
+    opacity: 0.3;
     top: 0;
     right: 0;
 
     @keyframes important1 {
       0% {
-        transform: translate(0);
+        transform: translateX(0);
       }
       100% {
         right: 100%;
-        transform: translate(100%);
+        transform: translateX(100%);
       }
     }
     animation: important1 2s ease-in forwards;
   }
 
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
-    width: 253px;
-    height: 253px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
     left: 0;
     bottom: 0;
     background: #ffffff;
-    filter: blur(250px);
+    filter: blur(100px);
+    opacity: 0.3;
 
     @keyframes important2 {
       0% {
-        transform: translate(0);
+        transform: translateX(0);
       }
       100% {
         left: 100%;
-        transform: translate(-100%);
+        transform: translateX(-100%);
       }
     }
 
@@ -58,8 +62,8 @@ export const HeroSection = styled.section`
 
 export const Wrapper = styled.div`
   display: flex;
-  height: 100%;
   width: 100%;
+  z-index: 2;
 `;
 
 export const InfoSecBox = styled.div`
@@ -67,6 +71,7 @@ export const InfoSecBox = styled.div`
   flex-direction: column;
   flex: 0 0 50%;
   padding-top: 50px;
+  padding-left: 150px;
 `;
 
 export const LogoWrapper = styled.div``;
@@ -86,5 +91,21 @@ export const AnimatedPart = styled.span`
     100% {
       color: #d42530;
     }
+  }
+`;
+
+export const Footer = styled.footer`
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.5;
   }
 `;

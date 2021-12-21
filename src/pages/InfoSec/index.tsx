@@ -6,6 +6,7 @@ import {
   LogoWrapper,
   ContentBox,
   AnimatedPart,
+  Footer,
 } from "./styles";
 import { ReactComponent as Logo } from "../../assets/svg/Logo.svg";
 import StyledTitle from "../../components/Title";
@@ -51,6 +52,9 @@ const InfoSec: React.FC = () => {
         </InfoSecBox>
         <Contacts />
       </Wrapper>
+      <Footer>
+        <p style={{ color: "rgba(255, 255, 255, 0.6)" }}>@2021 INFOSEC LLC</p>
+      </Footer>
     </HeroSection>
   );
 };
