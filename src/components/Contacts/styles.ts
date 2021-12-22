@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { device } from "../../mediaQueries";
+
 export const JoinUsBoxWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -6,6 +8,11 @@ export const JoinUsBoxWrapper = styled.div`
   flex: 0 0 50%;
   padding: 0 50px 0 50px;
   animation: identifier 3s ease-in;
+
+  @media only screen and (${device.tabletMax}) {
+    padding: 0 20px 0 20px;
+    margin-bottom: 120px;
+  }
 
   @keyframes identifier {
     0% {
@@ -23,7 +30,11 @@ export const JoinUsBox = styled.div`
   background-color: #05090e;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  padding: 50px 80px 50px 80px;
+  padding: 40px 80px 50px 80px;
+
+  @media only screen and (${device.tabletMax}) {
+    padding: 20px 30px 20px 30px;
+  }
 `;
 
 export const TitleWrapper = styled.div`

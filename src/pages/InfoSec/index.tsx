@@ -7,13 +7,19 @@ import {
   ContentBox,
   AnimatedPart,
   Footer,
+  UnderLine,
 } from "./styles";
 import { ReactComponent as Logo } from "../../assets/svg/Logo.svg";
 import StyledTitle from "../../components/Title";
 import Paragraph from "../../components/Paragraph";
 import Contacts from "../../components/Contacts/index";
+import { Grid } from "antd";
+
+const { useBreakpoint } = Grid;
 
 const InfoSec: React.FC = () => {
+  const breakpoint = useBreakpoint();
+
   return (
     <HeroSection>
       <Wrapper>
@@ -25,18 +31,23 @@ const InfoSec: React.FC = () => {
               <Logo style={{ height: "100%", width: "100%" }} />
             </div>
           </LogoWrapper>
-          <div
-            style={{ height: "1px", width: "60%", background: "#d42530" }}
-          ></div>
+          <UnderLine />
           <ContentBox>
-            <StyledTitle level={1} style={{ fontSize: "46px" }}>
+            <StyledTitle
+              level={1}
+              style={
+                breakpoint.lg
+                  ? { fontSize: "46px" }
+                  : { fontSize: "35px", textAlign: "center" }
+              }
+            >
               WEBSITE IS <AnimatedPart> COMING SOON </AnimatedPart>
             </StyledTitle>
             <p
               style={{
                 fontSize: "14px",
                 color: "#7D7E81",
-                paddingRight: "100px",
+                paddingRight: breakpoint.lg ? "100px" : "0px",
                 lineHeight: "1.7",
               }}
             >
@@ -53,7 +64,10 @@ const InfoSec: React.FC = () => {
         <Contacts />
       </Wrapper>
       <Footer>
-        <p style={{ color: "rgba(255, 255, 255, 0.6)" }}>@2021 INFOSEC LLC</p>
+        <p style={{ color: "rgba(255, 255, 255, 0.6)" }}>
+          {" "}
+          <span style={{ fontSize: "20px" }}>©</span> 2021 INFOSEC LLC
+        </p>
       </Footer>
     </HeroSection>
   );

@@ -5,10 +5,11 @@ import {
   IconBox,
   ContactBox,
 } from "./styles";
-import { SvgIconProps } from "@material-ui/core";
+import { Grid } from "antd";
+
+const { useBreakpoint } = Grid;
 
 interface IContactItem {
-  // icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   icon?: any;
   contact?: string | number;
   hrefType?: string;
@@ -21,28 +22,29 @@ const ContactItem: React.FC<IContactItem> = ({
   hrefType,
   hrefTO,
 }) => {
+  const breakpoint = useBreakpoint();
   return (
     <ContactsBoxWrapper>
       <IconContactBox>
         <IconBox>
-          {<IconComponent style={{ verticalAlign: "middle" }} />}
+          {<IconComponent style={{ verticalAlign: "middle", width: "18px" }} />}
         </IconBox>
         <ContactBox>
-          <p
+          <div
             style={{
-              fontSize: "16px",
+              fontSize: breakpoint.lg ? "16px" : "14px",
               color: "white",
-              display: "inline",
               paddingLeft: "20px",
             }}
           >
             <a
               style={{ color: "white", textDecoration: "none" }}
               href={hrefTO ? `${hrefTO}` : `${hrefType}${contact}`}
+              target="blank"
             >
-              {contact}
+              <span>{contact}</span>
             </a>
-          </p>{" "}
+          </div>{" "}
         </ContactBox>
       </IconContactBox>
     </ContactsBoxWrapper>

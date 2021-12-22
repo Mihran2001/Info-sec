@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { device } from "../../mediaQueries";
 
 export const HeroSection = styled.section`
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,6 +65,10 @@ export const Wrapper = styled.div`
   display: flex;
   width: 100%;
   z-index: 2;
+
+  @media only screen and (${device.tabletMax}) {
+    flex-direction: column;
+  }
 `;
 
 export const InfoSecBox = styled.div`
@@ -72,9 +77,23 @@ export const InfoSecBox = styled.div`
   flex: 0 0 50%;
   padding-top: 50px;
   padding-left: 150px;
+
+  @media only screen and (${device.tabletMax}) {
+    padding: 30px;
+  }
 `;
 
 export const LogoWrapper = styled.div``;
+
+export const UnderLine = styled.div`
+  height: 1px;
+  width: 60%;
+  background: #d42530;
+
+  @media only screen and (${device.tabletMax}) {
+    width: 100%;
+  }
+`;
 
 export const ContentBox = styled.div`
   padding: 10px;

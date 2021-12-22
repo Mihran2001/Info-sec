@@ -8,11 +8,11 @@ const Contacts: React.FC = () => {
   return (
     <JoinUsBoxWrapper>
       <JoinUsBox>
-        <TitleWrapper>
+        {/* <TitleWrapper>
           <StyledTitle level={1} style={{ fontSize: "36px" }}>
             You can join us!
           </StyledTitle>
-        </TitleWrapper>
+        </TitleWrapper> */}
         {contactsData.map((item, index) => (
           <ContactItem
             icon={item.icon}
