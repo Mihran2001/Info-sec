@@ -83,7 +83,12 @@ export const InfoSecBox = styled.div`
   }
 `;
 
-export const LogoWrapper = styled.div``;
+export const LogoWrapper = styled.div`
+  @media only screen and (${device.tabletMax}) {
+    display: flex;
+    justify-content: center;
+  }
+`;
 
 export const UnderLine = styled.div`
   height: 1px;

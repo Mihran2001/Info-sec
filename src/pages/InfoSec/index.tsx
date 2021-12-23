@@ -26,7 +26,11 @@ const InfoSec: React.FC = () => {
         <InfoSecBox>
           <LogoWrapper>
             <div
-              style={{ width: "300px", height: "80px", marginBottom: "30px" }}
+              style={{
+                width: "300px",
+                height: "80px",
+                marginBottom: "30px",
+              }}
             >
               <Logo style={{ height: "100%", width: "100%" }} />
             </div>
@@ -45,11 +49,11 @@ const InfoSec: React.FC = () => {
             </StyledTitle>
             <p
               style={{
-                fontSize: "14px",
+                fontSize: breakpoint.lg ? "14px" : "13px",
                 color: "#7D7E81",
                 paddingRight: breakpoint.lg ? "100px" : "0px",
+                paddingLeft: breakpoint.lg ? "0px" : "8px",
                 lineHeight: "1.7",
-                textAlign: "center",
               }}
             >
               {" "}
