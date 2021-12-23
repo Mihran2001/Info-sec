@@ -19,6 +19,7 @@ export const IconContactBox = styled.ul`
   padding-top: 30px;
   margin-bottom: 20px;
   align-items: center;
+  list-style: none;
   @media only screen and (${device.tabletMax}) {
     padding-top: 15px;
   }
@@ -30,4 +31,8 @@ export const IconBox = styled.li`
 export const ContactBox = styled.li`
   display: inline-block;
   text-justify: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
