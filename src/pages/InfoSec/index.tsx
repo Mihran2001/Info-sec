@@ -49,6 +49,7 @@ const InfoSec: React.FC = () => {
                 color: "#7D7E81",
                 paddingRight: breakpoint.lg ? "100px" : "0px",
                 lineHeight: "1.7",
+                textAlign: "center",
               }}
             >
               {" "}
