@@ -57,12 +57,14 @@ const InfoSec: React.FC = () => {
               }}
             >
               {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
+              «InfoSec» company organizes and executes a number of events to
+              ensure the information security of your business. We are a team of
+              highly skilled developers, consultants and experts who possess
+              extensive practical experience, have professional titles and
+              certificates. We are members of international organizations and
+              actively participate in the industry's development. Our customers
+              are the major banks, betting companies, leading telecom operators,
+              industrial companies and governmental organizations.
             </p>
           </ContentBox>
         </InfoSecBox>
