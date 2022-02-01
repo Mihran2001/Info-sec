@@ -73,7 +73,7 @@ const InfoSec: React.FC = () => {
       <Footer>
         <p style={{ color: "rgba(255, 255, 255, 0.6)" }}>
           {" "}
-          <span style={{ fontSize: "20px" }}>©</span> 2021 INFOSEC LLC
+          <span style={{ fontSize: "20px" }}>©</span> 2021 - 2022 INFOSEC LLC
         </p>
       </Footer>
     </HeroSection>
