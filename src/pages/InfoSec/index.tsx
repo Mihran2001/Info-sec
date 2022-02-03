@@ -54,6 +54,7 @@ const InfoSec: React.FC = () => {
                 paddingRight: breakpoint.lg ? "100px" : "0px",
                 paddingLeft: breakpoint.lg ? "0px" : "8px",
                 lineHeight: "1.7",
+                textAlign: breakpoint.lg ? "left" : "justify",
               }}
             >
               {" "}
